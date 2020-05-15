@@ -1,0 +1,15 @@
+/.git
+/node_modules
+*.log
+/.idea
+/dist
+yarn.lock
+package-lock.json
+.env
+.package-lock.json
+index\.bundle\.js
+gcs_keyfile.json
+/user*.pub
+/id_rsa
+ssh/*
+*.swp
