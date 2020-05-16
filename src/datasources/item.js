@@ -3,7 +3,7 @@ import { RESTDataSource } from 'apollo-datasource-rest';
 class ItemAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'http://localhost:8000/api/';
+    this.baseURL = process.env.GRAPHQL_APP_API_URL;
   }
   async getAllItems() {
     return  this.get('item');

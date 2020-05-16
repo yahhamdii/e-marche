@@ -5,6 +5,7 @@ import resolvers from './resolvers';
 import ItemAPI from './datasources/item';
 import UserAPI from './datasources/user';
 
+require('dotenv').config();
 const server = new ApolloServer({
     typeDefs,
     resolvers,
