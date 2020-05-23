@@ -1,5 +1,6 @@
 import  { gql } from 'apollo-server';
-const typeDefs = gql`
+
+export default gql`
 type Query {
    
     item(id: ID!): Item
@@ -159,5 +160,4 @@ type Query {
     SMALL
     LARGE
   }
-`
-export default typeDefs;
+`;

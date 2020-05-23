@@ -1,7 +1,7 @@
 import {ApolloServer} from 'apollo-server';
-import {dotenv} from 'dotenv';
-import typeDefs  from './schema';
-import resolvers from './resolvers';
+import dotenv from 'dotenv';
+import typeDefs  from './schema/index';
+import resolvers from './resolvers/index';
 import ItemAPI from './datasources/item';
 import UserAPI from './datasources/user';
 
