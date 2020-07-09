@@ -4,7 +4,7 @@ export default gql`
 type Query {
    
     item(id: ID!): Item
-    listitem :[Item]
+    listitem(filter: String) :[Item]
     user(id: ID!): User
     listuser :[User]
   }

@@ -4,8 +4,8 @@ export default {
 
         item: (_, { id }, { dataSources }) =>
             dataSources.itemAPI.getItemById({ itemId: id }),
-        listitem: (_, $, { dataSources }) =>
-            dataSources.itemAPI.getAllItems(),
+        listitem: (_, {filter}, { dataSources }) =>
+            dataSources.itemAPI.getAllItems(filter),
     },
     Mutation: {
         createItem: async (_, { date_create, date_update },{ dataSources }) => {

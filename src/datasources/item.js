@@ -5,8 +5,8 @@ class ItemAPI extends RESTDataSource {
     super();
     this.baseURL = process.env.GRAPHQL_APP_API_URL;
   }
-  async getAllItems() {
-    return  this.get('item');
+  async getAllItems(filter) {
+    return  this.get(`item?filter=${filter}`);
   }
   async getItemById({itemId}) {
     return  this.get(`item/${itemId}`);
