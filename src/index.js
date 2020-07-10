@@ -1,4 +1,4 @@
-import {ApolloServer} from 'apollo-server';
+import { ApolloServer } from 'apollo-server';
 import dotenv from 'dotenv';
 import typeDefs  from './schema/index';
 import resolvers from './resolvers/index';
