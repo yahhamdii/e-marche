@@ -4,6 +4,7 @@ import typeDefs  from './schema/index';
 import resolvers from './resolvers/index';
 import ItemAPI from './datasources/item';
 import UserAPI from './datasources/user';
+import CategoryAPI from './datasources/category';
 
 require('dotenv').config();
 const server = new ApolloServer({
@@ -12,6 +13,7 @@ const server = new ApolloServer({
     dataSources: () => ({
         itemAPI: new ItemAPI(),
         userAPI: new UserAPI(),
+        categoryAPI: new CategoryAPI(),
     })
 });
 

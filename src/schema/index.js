@@ -7,6 +7,8 @@ type Query {
     listitem(filter: String) :[Item]
     user(id: ID!): User
     listuser :[User]
+    category(id: ID!): Category
+    listcategory(filter: String) :[Category]
   }
   type Stock {
     id: String
@@ -32,6 +34,7 @@ type Query {
     type: String
     name: String
     slug: String
+    temperature: String
   }
   type Manufacturer {
     id: String
@@ -148,13 +151,19 @@ type Query {
   type itemAded {
     converdate_create: String 
   }
+  type categoryAded {
+    converdate_create: String 
+  }
   type Mutation {
     createUser(username : String, email: String, password: String): UserAded
     updateUser(id: ID!,username : String, email: String, password: String): UserAded 
     deleteUser(id: ID!): UserAded
     createItem(date_create : String, date_update: String): itemAded 
     updateItem(id: ID!,date_create : String, date_update: String): itemAded 
-    deleteItem(id: ID!): itemAded 
+    deleteItem(id: ID!): itemAded
+    createCategory(date_create : String, date_update: String): categoryAded 
+    updateCategory(id: ID!,date_create : String, date_update: String): categoryAded 
+    deleteCategory(id: ID!): categoryAded 
   }
   enum PatchSize {
     SMALL
