@@ -17,7 +17,7 @@ type User {
     firstname: String
     first_visit: String
     type: String
-    platform: Platform
+    plateform: Plateform
   }
 type UserAded {
     converMail: String 

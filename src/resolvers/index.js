@@ -4,6 +4,7 @@ import users from './users'
 import category from './category'
 import attribut from './attribut'
 import manufacturer from './manufacturer'
+import plateform from './plateform'
 
 
 export default merge(
@@ -12,6 +13,7 @@ export default merge(
         users,
         category,
         attribut,
-        manufacturer
+        manufacturer,
+        plateform
     ]
 )

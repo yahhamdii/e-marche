@@ -7,6 +7,7 @@ import UserAPI from './datasources/user';
 import CategoryAPI from './datasources/category';
 import AttributAPI from './datasources/attribut';
 import ManufacturerAPI from './datasources/manufacturer';
+import PlateformAPI from './datasources/plateform';
 
 require('dotenv').config();
 const server = new ApolloServer({
@@ -18,6 +19,7 @@ const server = new ApolloServer({
         categoryAPI: new CategoryAPI(),
         attributAPI: new AttributAPI(),
         manufacturerAPI: new ManufacturerAPI(),
+        plateformAPI: new PlateformAPI(),
     })
 });
 

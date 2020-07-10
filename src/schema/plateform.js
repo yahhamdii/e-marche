@@ -2,7 +2,7 @@ import { gql } from 'apollo-server';
 
 export default gql`
 
-type Platform {
+type Plateform {
     id: String
     date_update: String
     attributs: [Attribut]
@@ -22,5 +22,18 @@ type Platform {
     tel_technical: String
     fax_technical: String
     email_technical: String
+}
+type plateformAded {
+    converdate_create: String 
+  }
+extend type Query {
+    plateform(id: ID!): Plateform
+    listplateform(filter: String) :[Plateform]
+}
+    
+extend type Mutation {
+    createPlateform(date_create : String, date_update: String): plateformAded 
+    updatePlateform(id: ID!,date_create : String, date_update: String): plateformAded 
+    deletePlateform(id: ID!): plateformAded
 }
 `;
