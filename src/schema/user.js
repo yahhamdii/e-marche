@@ -24,7 +24,7 @@ type UserAded {
 }
 extend type Query {
     user(id: ID!): User
-    listuser :[User]
+    listuser(filter : String) :[User]
 }
     
 extend type Mutation {

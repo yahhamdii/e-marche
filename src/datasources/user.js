@@ -5,8 +5,8 @@ class UserAPI extends RESTDataSource {
     super();
     this.baseURL = process.env.GRAPHQL_APP_API_URL;
   }
-  async getAllUsers() {
-    return  this.get('user');
+  async getAllUsers(filter) {
+    return  this.get(`user?filter=${filter}`); 
   }
   async getUserById({ userId }) {
     return  this.get(`user/${userId}`);

@@ -3,8 +3,8 @@ export default  {
     Query: {
         user: (_, { id }, { dataSources }) =>
             dataSources.userAPI.getUserById({ userId: id }),
-        listuser: (_, $, { dataSources }) =>
-            dataSources.userAPI.getAllUsers(),
+        listuser: (_, {filter}, { dataSources }) =>
+            dataSources.userAPI.getAllUsers(filter),
     },
     Mutation: {
         createUser: async (_, { username, email, password },{ dataSources }) => {
