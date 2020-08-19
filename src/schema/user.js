@@ -19,8 +19,12 @@ type User {
     type: String
     plateform: Plateform
   }
-type UserAded {
-    converMail: String 
+type UserLoged {
+    access_token: String 
+    expires_in: Int 
+    token_type: String 
+    scope: String 
+    refresh_token: String 
 }
 extend type Query {
     user(id: ID!): User
@@ -28,8 +32,9 @@ extend type Query {
 }
     
 extend type Mutation {
-    createUser(username : String, email: String, password: String): UserAded
-    updateUser(id: ID!,username : String, email: String, password: String): UserAded 
-    deleteUser(id: ID!): UserAded
+    loginUser(username : String, password: String): UserLoged
+    createUser(username : String, email: String, password: String): User
+    updateUser(id: ID!,username : String, email: String, password: String): User 
+    deleteUser(id: ID!): User
 }
 `;

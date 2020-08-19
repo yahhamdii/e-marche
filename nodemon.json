@@ -8,7 +8,7 @@
   
   "verbose": true,
   "execMap": {
-    "js": "npm run build && npm start"
+    "js": "npm start"
   },
   "events": {
   },

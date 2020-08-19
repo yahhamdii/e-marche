@@ -7,6 +7,14 @@ export default  {
             dataSources.userAPI.getAllUsers(filter),
     },
     Mutation: {
+        loginUser: async (_, { username, password }, { dataSources }) => {
+            const user = await dataSources.userAPI.makeLoginWith({ username, password });
+
+            if (user) {
+              return user;
+            }
+            throw new Error('no allowed');
+        },
         createUser: async (_, { username, email, password },{ dataSources }) => {
             const user = await dataSources.userAPI.CreateUser({ username, email, password });
             if (user) {
